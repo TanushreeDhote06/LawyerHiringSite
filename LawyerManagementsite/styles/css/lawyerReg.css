@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: ui-rounded;
+}
+
+/* Navbar */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: rgb(29, 6, 6);
+    z-index: 4;
+}
+
+#logo {
+    margin: 2px;
+    z-index: 4;
+}
+
+#logo img {
+    height: 50px;
+    width: 50px;
+}
+
+#navbar ul {
+    display: flex;
+    z-index: 4;
+}
+
+#navbar::before {
+
+    color: white;
+    background-color: rgb(65, 63, 64);
+    position: absolute;
+    height: 30%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#navbar ul li {
+    list-style: none;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+#navbar ul li a {
+    color: white;
+    display: block;
+    padding: 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 10px;
+    z-index: 4;
+}
+
+#navbar ul li a:hover {
+    color: rgb(147, 107, 107);
+}
+
+#navbar ul li a:active {
+    background-color: rgb(62, 62, 62);
+}
+
+.btn {
+    background-color: rgba(52, 43, 42, 0.639);
+    color: beige;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 4px 14px;
+    width: 180px;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: rgba(51, 42, 45, 0.68);
+}
+
+#home {
+    margin-top: 100px;
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+    padding: 3px 100px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#home1 {
+    font-size: larger;
+    display: flex;
+    flex-direction: row;
+    padding: 3px 100px;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 40%;
+    margin: 100px auto 0;
+}
+
+#home::before,
+#home1::before {
+    content: "";
+    background: url('/static/images/law1.jpg') no-repeat center center/cover;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: -8;
+    opacity: 1;
+}
+
+.client_container {
+    display: block;
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    color: rgb(253, 253, 253);
+}
+
+#btn1 {
+    width: 100%;
+    background-color: rgba(91, 10, 27, 0.439);
+    border-radius: 3px;
+    color: white;
+    height: 30px;
+}
+
+.form-grp {
+    margin: 15px auto;
+    width: 100%;
+}
+
+.form-grp input {
+    background-color: #1c0e109e;
+    font-size: 0.82em;
+    color: rgb(235, 239, 243);
+    text-align: center;
+    display: block;
+    height: 25px;
+    margin: 3px auto;
+    width: 100%;
+    font-weight: bold;
+}
+
+.client_container h3 {
+    background: rgb(123 93 43, 0.8);
+    color: #ffffff;
+    padding: 3px 2px;
+    font-size: 0.9em;
+    text-align: center;
+    width: 100%;
+}
+
+section p {
+    color: white;
+    font-size: 1.1rem;
+}
+
+#services {
+    margin: 34px;
+    display: flex;
+}
+
+#services .box {
+    display: block;
+    width: 33%;
+    margin: auto;
+    height: 50px;
+    text-align: center;
+}
+
+#services .box img {
+    height: 10px;
+    margin: auto;
+}
+
+h1 {
+    color: #beb7b2;
+    margin: 85px auto 20px;
+    font-size: 1.4rem;
+    background: hsla(0, 64%, 14%, 0.774);
+    width: 50%;
+    text-align: center;
+}
+
+.h-secondary center {
+    color: rgb(249, 234, 216);
+}
+
+
+#lawyerform {
+    flex-grow: 1;
+    width: 40%;
+}

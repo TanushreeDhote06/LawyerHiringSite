@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Comwpatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hire_my_lawyer.com</title>
+    <link rel="stylesheet" href="/static/css/clientReg.css">
+<body>
+    <header>
+        <nav id="navbar">
+            <div id="logo">
+                <img src="/static/images/logo.jpg" alt="hire_a_lawyer">
+            </div>
+            <ul>
+                <li class="item"><a href="/">Home</a></li>
+                <li class="item"><a href="/clientRegistration">Client
+                        Registration</a></li>
+                <li class="item"><a href="/lawyerRegistration">Lawyer Registration</a></li>
+                <li class="item"><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="home1">
+        <div class="client_container" id="lawyerform">
+            <h1 class="prime">Client Registration</h1>
+            <form action="/clientRegistration" method="POST">
+                <div class="form-grp">
+                    <h3>Register Here</h3>
+                    <input type="text" name="userid" placeholder="UserID" required>
+                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="password" name="password" placeholder="Create Password" required>
+                    <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="text" name="first_name" placeholder="First name" required>
+                    <input type="text" name="last_name" placeholder="Last name" required>
+                    <input type="tel" name="contact_no" placeholder="Contact No" required>
+                    <input type="tel" name="alternate_contact_no" placeholder="Alternate Contact No">
+                    <input type="date" name="registration_date" placeholder="Registration Date" required>
+                    <button id="btn1" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

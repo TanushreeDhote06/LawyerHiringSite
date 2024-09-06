@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hire_my_lawyer.com</title>
+    <link rel="stylesheet" href="/static/css/lawyerReg.css">
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <div id="logo">
+                <img src="/static/images/logo.jpg" alt="hire_a_lawyer">
+            </div>
+            <ul>
+                <li class="item"><a href="/">Home</a></li>
+                <li class="item"><a href="/clientRegistration">Client
+                        Registration</a></li>
+                <li class="item"><a href="/lawyerRegistration">Lawyer Registration</a></li>
+                <li class="item"><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="home1">
+        <div class="client_container" id="lawyerform">
+            <h1 class="prime">Lawyer Registration</h1>
+            <form action="/lawyerRegistration">
+                <div class="form-grp">
+                    <h3>Register Here</h3>
+                    <input type="number" name="lawyer_id" placeholder="Lawyer ID" required>
+                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="number" name="bar_license_number" placeholder="Bar License Number" required>
+                    <input type="number" name="experience" placeholder="Years of Experience" required>
+                    <input type="text" name="specialization" placeholder="Specialization" required>
+                    <input type="text" name="education" placeholder="Education" required>
+                    <input type="text" name="firm" placeholder="Firm/Organization" required>
+                    <input type="tel" name="contact_no" placeholder="Contact No" required>
+                    <input type="tel" name="alternate_contact_no" placeholder="Alternate Contact No">
+                    <input type="text" name="languages" placeholder="Languages Spoken" required>
+                    <button type="submit" id="btn1">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

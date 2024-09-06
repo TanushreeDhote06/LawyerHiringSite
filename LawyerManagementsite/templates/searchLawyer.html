@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lawyer Search</title>
+    <link rel="stylesheet" href="/static/css/style_search.css">
+<body>
+    <!-- Navbar -->
+    <header>
+        <div id="navbar">
+            <div id="logo">
+                <img src="/static/images/logo.jpg" alt="Logo">
+            </div>
+            <ul>
+                <li class="item"><a href="/">Home</a></li>
+                <li class="item"><a href="/clientRegistration">Client
+                        Registration</a></li>
+                <li class="item"><a href="/lawyerRegistration">Lawyer Registration</a></li>
+                <li class="item"><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Filter Section -->
+    <section id="filter">
+        <div class="filter-box">
+            <h3>Location</h3>
+            <select>
+                <option value="">Select Location</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        <div class="filter-box">
+            <h3>Languages Spoken</h3>
+            <input type="text" placeholder="Enter Language">
+        </div>
+        <div class="filter-box">
+            <h3>Experience</h3>
+            <select>
+                <option value="">Select Experience</option>
+                <option value="1-5 years">1-5 years</option>
+                <option value="5-10 years">5-10 years</option>
+                <option value="10+ years">10+ years</option>
+            </select>
+        </div>
+        <div class="filter-box">
+            <h3>Practice Areas</h3>
+            <select>
+                <option value="">Default</option>
+                <option value="name">Criminal law</option>
+                <option value="experience">
+                    Family law</option>
+                <option value="rating">Corporate law</option>
+                <option value="rating">
+                    Employment law</option>
+                <option value="rating">Environmental law</option>
+                <option value="rating">
+                    Immigration law</option>
+                <option value="rating">Health law</option>
+            </select>
+        </div>
+        <div class="filter-box">
+            <h3>Sort By</h3>
+            <select>
+                <option value="">Default</option>
+                <option value="name">Name</option>
+                <option value="experience">Experience</option>
+                <option value="rating">Rating</option>
+            </select>
+        </div>
+        <div class="filter-box" id="button">
+            <button class="btn">Apply Filters</button>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results">
+        {% if lawyers %}
+        {% for lawyer in lawyers %}
+        <div class="lawyer-card">
+            <div class="lawyer-info">
+                <h4>{{ lawyer.username }}</h4>
+                <p class="specializations">{{ lawyer.specialization }}</p>
+                <p>Experience: {{ lawyer.experience }} years</p>
+                <div class="actions">
+                    <a href="#">Contact Lawyer</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <p>No lawyers found matching your criteria.</p>
+        {% endif %}
+    </section>
+    <!-- Featured Section -->
+    <section id="featured">
+        <div>
+            <h2>Featured Lawyers</h2>
+        </div>
+        <div class="featuredLawyer">
+            <div class="featured-lawyer">
+                <img src="/static/images/featuredLawyer.jpg" alt="Featured Lawyer 1">
+                <div class="info">
+                    <h4>Michael Johnson</h4>
+                    <p class="specializations">Criminal Defense, Personal Injury</p>
+                </div>
+            </div>
+            <div class="featured-lawyer">
+                <img src="/static/images/featuredLawyer.jpg" alt="Featured Lawyer 2">
+                <div class="info">
+                    <h4>Emily Brown</h4>
+                    <p class="specializations">Immigration Law, Employment Law</p>
+                </div>
+            </div>
+            <div class="featured-lawyer">
+                <img src="/static/images/featuredLawyer.jpg" alt="Featured Lawyer 2">
+                <div class="info">
+                    <h4>Emily Brown</h4>
+                    <p class="specializations">Immigration Law, Employment Law</p>
+                </div>
+            </div>
+            <div class="featured-lawyer">
+                <img src="/static/images/featuredLawyer.jpg" alt="Featured Lawyer 2">
+                <div class="info">
+                    <h4>Emily Brown</h4>
+                    <p class="specializations">Immigration Law, Employment Law</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
